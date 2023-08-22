@@ -174,8 +174,8 @@
         @empty
         <p>No hay productos en esta tienda, vuelva pronto.</p>
         @endforelse
-    </div>
-                    <footer>
+    </div>  
+    <footer>
         <p>&copy; 2023 Las ruinas de bangladesh. </p>contacto:lasruinasdebangladesh@gmail.com</p>
         </p>     Todos los derechos reservados.</p>
     </footer>

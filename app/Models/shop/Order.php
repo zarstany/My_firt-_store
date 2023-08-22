@@ -9,12 +9,16 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Order extends Model
 {
     use HasFactory;
+    protected $table = 'orders';
+
+    
+
     public $fillable = [
         'sub_total',
         'delivery_amount',
         'iva',
         'total',
-        'quantity_product',
+        'quantity_products',
         'status',
         'user_id'
     ];

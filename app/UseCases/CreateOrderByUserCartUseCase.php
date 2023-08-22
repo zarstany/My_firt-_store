@@ -11,7 +11,7 @@ class CreateOrderByUserCartUseCase{
 public function execute(int $userId): Order
 {
     $cartrepository = new EloquentCartRepository();
-    $orderRepository = new EloquentOrderRepository();
+    $orderRepository = new EloquentOrderRepository;
     $orderProductRepository = new EloquentOrderProductRepository();
     
     $calculateSubTotalAmountUseCases = new CalculateSubTotalAmountUseCases();
@@ -34,7 +34,9 @@ public function execute(int $userId): Order
       $total,
       $quantityTotal,
       $userId
+      
      );
+     
 
      foreach ($carts as $cart) {
         $orderProductRepository->OrderProduct(

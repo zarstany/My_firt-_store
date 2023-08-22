@@ -33,7 +33,8 @@ class EloquentOrderRepository
         int $total,
         int $quantityTotal,
         int $userId
-    ): Order {
+        
+    ): Order { 
        return  Order::create([
             'sub_total' => $subTotal,
             'delivery_amount' => $deliveryAmount,
