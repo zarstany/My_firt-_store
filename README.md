@@ -12,3 +12,4 @@ Ahora nos encargaremos del perfil del usuario, comenzando por :
 -El registro 
 -El login
 debemos crear un repositorio para los usuarios
+Luego debemos crear el home y el carrito

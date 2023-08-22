@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta</title>
+    <title>Iniciar Sesión</title>
 
     <style>
         body {
@@ -35,7 +35,7 @@
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
-            color: #fff; /* Texto blanco */
+            color: #fff; /* Color de etiquetas en blanco */
         }
 
         input {
@@ -66,7 +66,7 @@
         a {
             display: block;
             text-align: center;
-            color: #b39ddb; /* Color de enlace morado claro */
+            color: #9575cd; /* Color de enlace morado claro */
             text-decoration: none;
             margin-top: 10px;
         }
@@ -74,38 +74,29 @@
 </head>
 
 <body>
-    <form action="{{ url('register') }}" method="POST">
+    <form action="{{ url('login') }}" method="POST">
         @csrf
 
-        <h3>Crear tu cuenta</h3>
-
-        <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="" value="{{ old('name') }}">
-        <br><br>
+        <h3>Iniciar Sesión</h3>
 
         <label for="email">Correo electrónico</label>
-        <input type="text" name="email" id="email" placeholder="" value="{{ old('email') }}">
+        <input type="text" name="email" id="email" value="{{ old('email') }}">
         <br><br>
 
         <label for="password">Contraseña</label>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" placeholder="Contraseña">
         <br><br>
 
         @if (session()->has('message'))
-        <strong>
-            {{ session()->get('message') }}
-        </strong>
-        <br><br>
+            <strong>{{ session()->get('message') }}</strong>
+            <br><br>
         @endif
 
-        <button type="submit">Crear mi cuenta</button>
+        <button type="submit">Iniciar Sesión</button>
 
         <br>
-        ¿Ya tienes una cuenta?
-        <a href="{{ url('login') }}">
-             Iniciar sesión
-        </a>
-
+        ¿No tienes una cuenta?
+        <a href="{{ url('register') }}">Ven a registrarte</a>
     </form>
 </body>
 
