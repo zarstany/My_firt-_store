@@ -2,7 +2,7 @@
 namespace App\Repositories;
 
 use App\Models\shop\Cart;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Collection;    
 
 Class EloquentCartRepository
 {

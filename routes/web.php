@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Cart\AddProductController;
 use App\Http\Controllers\Cart\CartSummaryController;
+use App\Http\Controllers\Cart\HistoryOrderController;
 use App\Http\Controllers\Cart\RemoveProductController;
 use App\Http\Controllers\Checkout\CheckoutController;
 use App\Http\Controllers\Checkout\CreateOrderController;
@@ -27,3 +28,4 @@ Route::delete('cart/remove', RemoveProductController::class);
 Route::get('cart-summary', CartSummaryController::class);
 Route::get('checkout', CheckoutController::class);
 Route::post('checkout', CreateOrderController::class);
+Route::post('history', HistoryOrderController::class);

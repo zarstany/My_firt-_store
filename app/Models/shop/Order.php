@@ -22,8 +22,9 @@ class Order extends Model
         'status',
         'user_id'
     ];
-    public function Orderproducts(): HasMany
-    {
-        return $this->hasMany(orderproducts::class);
-    }
+    public function orderproduct()
+{
+    return $this->hasMany(Orderproduct::class);
+}
+
 }

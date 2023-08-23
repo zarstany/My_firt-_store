@@ -52,5 +52,10 @@ class EloquentOrderRepository
         Order::where('id', '=', $orderId)
             ->update(['status' => $newStatus]);
     }
+    public function getByUserIdWithOrderProducts(int $userId)
+{
+    return Order::with('orderproduct')->where('user_id', '=', $userId)->get();
+}
+
 }
         

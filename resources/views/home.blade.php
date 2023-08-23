@@ -100,6 +100,14 @@
             text-align: center;
             padding: 10px;
         }
+     /* Agrega esta parte al estilo CSS existente */
+
+/* Estilo para los botones más pequeños */
+.smaller-button {
+    padding: 10px 20px; /* Reduce el espacio interno del botón */
+    font-size: 14px; /* Reduce el tamaño de la fuente del botón */
+}
+
     </style>
 </head>
 
@@ -139,9 +147,9 @@
                             fill="currentColor" />
                     </svg></button>
                 <div class="user-dropdown-content">
-                    <a href="#">Perfil</a>
-                    <a href="#">Configuración</a>
-                    <form action="{{ url('logout') }}" method="POST">@csrf<button class="logout-button">CerrarSesión</button></form>
+                <form action="{{ url('history') }}" method="POST">@csrf<button class="logout-button smaller-button">Historial de pedidos</button></form>
+                <form action="{{ url('logout') }}" method="POST">@csrf<button class="logout-button smaller-button">Cerrar Sesión</button></form>
+
                 </div>
             </div>
         </div>

@@ -12,5 +12,7 @@ class CalculateSubtoTalAmountUseCases
             $subTotalAmount += $cart->quantity * $cart->product->price;
         }
         return $subTotalAmount;
+  
     }
+    
 }
