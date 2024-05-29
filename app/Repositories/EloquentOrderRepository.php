@@ -2,12 +2,12 @@
 
 namespace App\Repositories;
 
-use App\Models\shop\Order;
+use App\Models\Shop\Order;
 use Illuminate\Database\Eloquent\Collection;
 
 class EloquentOrderRepository
 {
-    public function findById(int $orderId): ? Order
+    public function findById(int $orderId): ?Order
     {
         return Order::find($orderId);
     }
@@ -33,9 +33,8 @@ class EloquentOrderRepository
         int $total,
         int $quantityTotal,
         int $userId
-        
-    ): Order { 
-       return  Order::create([
+    ): Order {
+        return  Order::create([
             'sub_total' => $subTotal,
             'delivery_amount' => $deliveryAmount,
             'iva' => $iva,
@@ -44,7 +43,6 @@ class EloquentOrderRepository
             'status' => 'pending',
             'user_id' => $userId,
         ]);
-    
     }
 
     public function updateStatusByOrderId(int $orderId, string $newStatus): void
@@ -53,9 +51,7 @@ class EloquentOrderRepository
             ->update(['status' => $newStatus]);
     }
     public function getByUserIdWithOrderProducts(int $userId)
-{
-    return Order::with('orderproduct')->where('user_id', '=', $userId)->get();
+    {
+        return Order::with('orderproduct')->where('user_id', '=', $userId)->get();
+    }
 }
-
-}
-        

@@ -2,7 +2,7 @@
  namespace App\Repositories;
 
 use App\Models\shop\Orderproduct;
-use App\Models\shop\orderproducts;
+
 
  class EloquentOrderProductRepository
  {

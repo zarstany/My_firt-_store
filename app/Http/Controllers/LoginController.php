@@ -1,10 +1,15 @@
 <?php
+
 namespace App\Http\Controllers;
 
-class LoginController{
+use Illuminate\Http\Request;
 
-public function __invoke()
+
+class LoginController extends Controller
 {
-    return view('/login');
-}
+
+    public function __invoke(Request $request)
+    {
+     return view('login');
+    }
 }

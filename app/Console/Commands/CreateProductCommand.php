@@ -13,9 +13,9 @@ class CreateProductCommand extends Command
     public function handle()
     {
         $this->info('Creando nuevo producto');
-        $name = $this->ask('Nombre del producto');
-        $image = $this->ask('Imagen del producto');
-        $price = floatval($this->ask('Precio del producto'));
+        $name = $this->ask('Nombre');
+        $image = $this->ask('Link de la imagen ');
+        $price = floatval($this->ask('Precio '));
         $productRepository = new EloquentProductRepository();
         $productRepository->store($name, $image, $price);
         $this->warn('Tu producto ha sido creado');

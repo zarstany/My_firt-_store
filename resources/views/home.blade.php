@@ -123,6 +123,9 @@
         <h1>Las ruinas de Bangladesh</h1>
        
         <div class="user-menu">
+        <a href="register" class="cart-button" aria-label="Registrate"> <h5>Registrate</h5></a>  
+           
+        <a href="login" class="cart-button" aria-label="Inicia Sesion"> <h5>Iniciar Sesion </h5></a> 
             <a href="cart-summary" class="cart-button" aria-label="">
                 <svg class="cart-icon" width="35" height="35" viewBox="0 0 22 22" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -140,6 +143,7 @@
                     </svg>
                 </svg>
             </a>
+            
             <div class="user-dropdown">
                 <button class="logout-button"><svg width="35" height="35" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

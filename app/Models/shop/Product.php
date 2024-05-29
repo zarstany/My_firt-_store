@@ -1,9 +1,9 @@
 <?php
-namespace App\Models\shop;
+namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Model;
 
-class product extends Model {
+class Product extends Model {
  //creamos un modelo con el fillable creando un array de nuestras caracteristicas
     protected $fillable =[
         'name',

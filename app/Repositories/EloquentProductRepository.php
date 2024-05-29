@@ -2,7 +2,7 @@
 
 namespace app\Repositories;
 
-use App\Models\shop\product;
+use App\Models\Shop\Product;
 use Illuminate\Database\Eloquent\Collection;
 
 
@@ -17,9 +17,9 @@ class EloquentProductRepository
 
         ]);
     }
-    public function Getall(array $columns): Collection
+    public function getAll(): Collection
     {
-        return product::all($columns);
+        return product::all();
     }
    
     public function update(product $product, string $name, string $image, float $price): void

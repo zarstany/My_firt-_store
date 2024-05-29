@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\EloquentUserrepository;
-use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 

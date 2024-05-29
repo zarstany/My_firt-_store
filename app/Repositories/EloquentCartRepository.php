@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Collection;
 Class EloquentCartRepository
 {
 
-    public const QUANTITY_INIT = 1;
 
     public function GetUserCart(int $userId): Collection
     {
@@ -26,7 +25,7 @@ Class EloquentCartRepository
         return Cart::Create([
             'user_id'  => $userId,
             'product_id' => $productId,
-            'quantity' => self::QUANTITY_INIT
+            'quantity' => Cart::QUANTITY_INIT
         ]);
     }
     public function AddAnUnitQuantity(Cart $cart): void
