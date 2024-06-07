@@ -3,18 +3,20 @@
 namespace App\Repositories;
 
 use App\Models\User;
+use App\Models\UserProfile;
 use Illuminate\Support\Facades\Hash;
 
 class EloquentUserRepository
 {
-    public function store(string $name, string $email, string $password): void
+    public function store(string $name, string $email, string $password): User
     {
         $passwordHash = Hash::make($password);
-        User::create([
+         return User::create([
             'name' => $name,
             'email' => $email,
             'password' => $password
         ]);
+
     }
     public function findByEmail(string $email): ?User
     {

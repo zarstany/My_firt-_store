@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\EloquentUserrepository;
+use App\UseCases\RegisterUserUseCase;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 
@@ -14,8 +14,8 @@ class CreateAccountController
             $name = $request->get('name');
             $email = $request->get('email');
             $password = $request->get('password');
-            $userRepository = new EloquentUserrepository();
-            $userRepository->store($name, $email, $password);
+            $registerUserUseCase = new RegisterUserUseCase();
+            $user = $registerUserUseCase->execute($name, $email, $password);
             session()->flash('Su cuenta ha sido creada');
             return redirect()->to('/login');
         } catch (QueryException $queryException) {

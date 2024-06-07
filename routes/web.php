@@ -10,6 +10,7 @@ use App\Http\Controllers\CreateAccountController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\Products\CreateProductController;
 use App\Http\Controllers\Products\CreateProductViewController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('access')->group(function () {
         //Aqui iran los controladores que necesiten ser administradores
         Route::get('store/products', CreateProductViewController::class);
+        Route::post('crear/products', CreateProductController::class);
     });
 });
 

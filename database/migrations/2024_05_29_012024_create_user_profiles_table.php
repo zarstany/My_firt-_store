@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profile_users', function (Blueprint $table) {
+        Schema::create('user_profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('profile_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('profile_id')->references('id')->on('products');
+            $table->foreign('profile_id')->references('id')->on('profiles');
             $table->timestamps();
         });
     }

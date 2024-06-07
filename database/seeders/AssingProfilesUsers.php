@@ -15,12 +15,12 @@ class AssingProfilesUsers extends Seeder
     public function run(): void
     {
         
-        DB::table('profile_users')->insert([
-            'user_id' => 1,
+        DB::table('user_profiles')->insert([
+            'user_id' => 2,
             'profile_id' => User::CLIENT,
         ]);
-        DB::table('profile_users')->insert([
-            'user_id' => 2,
+        DB::table('user_profiles')->insert([
+            'user_id' => 1,
             'profile_id' => User::ADMINISTRATOR,
         ]);
     }
